@@ -1,4 +1,19 @@
-// Array of uplifting messages
+// Check if the app is already destroyed
+function isAppDestroyed() {
+  return localStorage.getItem('appDestroyed') === 'true';
+}
+
+// Initialize the app
+function initializeApp() {
+  if (isAppDestroyed()) {
+    // If destroyed, show the message and disable everything
+    document.body.classList.add('destroyed');
+    document.getElementById('selfDestructMessage').classList.add('show');
+    document.getElementById('selfDestructMessage').textContent = '💥 App Permanently Destroyed 💥';
+    return; // Stop further execution
+  }
+
+// random shenanigans
 const messages = [
     "Hiii Good morning, 🌞 Just a little reminder that you’re capable of amazing things today. Go shine!",
     "Psst OA ba? Yes, OO! Sana ayos ka lang today! Have a great day!",
@@ -70,5 +85,28 @@ function showDancingCats() {
     changeMessage();
     triggerConfetti();
     showDancingCats();
-  });
+  }); }
 
+  // Function to destroy the app permanently
+function destroyApp() {
+  // Save destruction state in localStorage
+  localStorage.setItem('appDestroyed', 'true');
+  
+  // Hide the app and show the self-destruct message
+  document.querySelector('.container').style.display = 'none';
+  document.getElementById('selfDestructMessage').classList.add('show');
+  document.getElementById('selfDestructMessage').textContent = '💥 Self-Destruct Activated 💥';
+  
+  // Disable all interactions
+  document.body.classList.add('destroyed');
+  
+  // Optional: Clear confetti and cats
+  document.getElementById('confetti').remove();
+  document.getElementById('catContainer').remove();
+}
+
+// Add event listener to the destroy button
+document.getElementById('destroyButton').addEventListener('click', destroyApp);
+
+// Start the app
+initializeApp();
