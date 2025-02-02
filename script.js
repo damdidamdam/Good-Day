@@ -1,7 +1,20 @@
 // Check if the app is already destroyed
-function isAppDestroyed() {
-  return localStorage.getItem('appDestroyed') === 'true';
+
+// Function to reset the app
+function resetApp() {
+  localStorage.removeItem('appDestroyed'); // Clear the destroyed flag
+  location.reload(); // Reload the page to reinitialize the app
 }
+
+// Show reset button if app is destroyed
+if (isAppDestroyed()) {
+  const resetButton = document.getElementById('resetButton');
+  resetButton.style.display = 'block'; // Show the reset button
+  resetButton.addEventListener('click', resetApp);
+}
+//function isAppDestroyed() {
+ // return localStorage.getItem('appDestroyed') === 'true';
+//}
 
 // Initialize the app
 //function initializeApp() {
@@ -91,7 +104,8 @@ function showDancingCats() {
     changeMessage();
     triggerConfetti();
     showDancingCats();
-  }); }
+  }); 
+//}
 
   // Function to destroy the app permanently
 //function destroyApp() {
@@ -113,7 +127,7 @@ function showDancingCats() {
   // Optional: Clear confetti and cats
  // document.getElementById('confetti').remove();
  // document.getElementById('catContainer').remove();
-}
+//}
 
 // Add event listener to the destroy button
 //document.getElementById('destroyButton').addEventListener('click', destroyApp);
