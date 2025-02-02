@@ -6,14 +6,14 @@ function isAppDestroyed() {
 // Initialize the app
 function initializeApp() {
   if (isAppDestroyed()) {
-    // If destroyed, show the message and disable everything
-    document.body.classList.add('destroyed');
-    document.getElementById('selfDestructMessage').classList.add('show');
+    const destructMessage = document.getElementById('selfDestructMessage');
+    destructMessage.classList.add('show');
     destructMessage.innerHTML = `
-      💥 App Permanently Destroyed 💥<br>
-      <span class="contact-message">Sorry, contact dam to fix this.</span>
+      <div class="destruct-text">💥 App Permanently Destroyed 💥</div>
+      <div class="contact-message">Sorry, contact dam to fix this.</div>
     `;
-    return;
+    document.body.classList.add('destroyed');
+    return; // Stop further execution
   }
 
 // random shenanigans
