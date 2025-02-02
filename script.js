@@ -29,16 +29,23 @@ const messages = [
   }
   
   // Function to trigger confetti
-  function triggerConfetti() {
-    const confettiSettings = { target: confettiCanvas, max: 200, size: 1.5, animate: true };
+function triggerConfetti() {
+    const confettiSettings = { 
+      target: 'confetti', // ID of the canvas element
+      max: 200, 
+      size: 1.5, 
+      animate: true, 
+      colors: [[255, 111, 97], [255, 214, 165], [255, 175, 75]] // Custom colors
+    };
+    
     const confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
   
+    // Stop confetti after 5 seconds
     setTimeout(() => {
       confetti.clear();
-    }, 5000); // Stop confetti after 5 seconds
+    }, 5000);
   }
-  
   // Function to show dancing cats
 function showDancingCats() {
   // Clear previous cats
