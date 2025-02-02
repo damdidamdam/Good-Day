@@ -8,13 +8,13 @@ const messages = [
     "Good morning mæm nurse, 🌻 Keep spreading your light—it makes the world a better place",
     "Hey there, I can't believe I did this. ✨ Anyways have a great day ahead, Fighting",
     "Just a little note to say you’re appreciated, loved, and absolutely wonderful. Have a magical day!",
-    "Good Afternoon, Check point lang po! Wala pa po kayong lisensya but your driving me crazy!",
+    "Good Afternoon, Check point lang po! Wala pa po kayong lisensya but you're driving me crazy!",
     "Hey you! 🌟 Today is a gift, and you’re the bow on top. Make it count and enjoy every moment!",
-    "Sending you a burst of positivity and good vibes! ✨ You’re unstoppable, and today is yours to conquer!",
-    "Hello, beautiful! 🌷 Just a reminder that you’re stronger than you think and more loved than you know.",
-    "Good morning, sunshine! 🌞 Your smile is contagious, so go out there and spread it everywhere!",
-    "Hey, you amazing person! 🌟 Today is your day to shine, so go out there and make it unforgettable!",
-    "Sending you a big dose of happiness and a sprinkle of joy! 🌈 You deserve all the good things today!"
+    "Sending you a burst of positivity and good vibes! ✨ Kaya mo yan miss little sanay na! btw d2 lng me!",
+    "HAHAHAHA lagyan ko tubatu para +point. 🌷 Yun okay OA talaga hehe sana matapos mo to.",
+    "Good evening lalabas lang to pag gabi mo na naopen sha. I hope u had a great day get the rest you deserve!",
+    "Hey, just letting u know na u can hmu whenever! 🌟 Dito lang ako sa gedli nagsesenti jkk.",
+    "Sending you a big dose of happiness and a shot of peace! Wish u all the good things today!"
   ];
   
   // Get elements
