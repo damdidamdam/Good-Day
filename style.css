@@ -57,6 +57,34 @@ body {
     height: 100%;
     pointer-events: none;
   }
+
+  
+/* Dancing Cats Container */
+#catContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  #catContainer img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    animation: dance 1s infinite alternate;
+  }
+  
+  /* Dance Animation */
+  @keyframes dance {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
   
   /* Animations */
   @keyframes fadeIn {

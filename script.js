@@ -39,8 +39,29 @@ const messages = [
     }, 5000); // Stop confetti after 5 seconds
   }
   
+  / Function to show dancing cats
+function showDancingCats() {
+  // Clear previous cats
+  catContainer.innerHTML = '';
+
+  // Add 3 dancing cats (you can adjust the number)
+  for (let i = 0; i < 3; i++) {
+    const catImg = document.createElement('img');
+    catImg.src = 'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif'; // Dancing cat GIF
+    catImg.alt = 'Dancing Cat';
+    catContainer.appendChild(catImg);
+  }
+
+  // Remove cats after 5 seconds
+  setTimeout(() => {
+    catContainer.innerHTML = '';
+  }, 5000);
+}
+
   // Add event listener to the button
   confettiButton.addEventListener('click', () => {
     changeMessage();
     triggerConfetti();
+    showDancingCats();
   });
+
