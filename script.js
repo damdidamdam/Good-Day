@@ -12,7 +12,7 @@ const messages = [
     "Hey you! 🌟 Today is a gift, and you’re the bow on top. Make it count and enjoy every moment!",
     "Sending you a burst of positivity and good vibes! ✨ Kaya mo yan miss little sanay na! btw d2 lng me!",
     "HAHAHAHA lagyan ko tubatu para +point. 🌷 Yun okay OA talaga hehe sana matapos mo to.",
-    "Good evening lalabas lang to pag gabi mo na naopen sha. I hope u had a great day get the rest you deserve!",
+    "Good evening na rin pala. I hope u had a great day get the rest you deserve!",
     "Hey, just letting u know na u can hmu whenever! 🌟 Dito lang ako sa gedli nagsesenti jkk.",
     "Sending you a big dose of happiness and a shot of peace! Wish u all the good things today!"
   ];
