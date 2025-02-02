@@ -4,17 +4,17 @@ function isAppDestroyed() {
 }
 
 // Initialize the app
-function initializeApp() {
-  if (isAppDestroyed()) {
-    const destructMessage = document.getElementById('selfDestructMessage');
-    destructMessage.classList.add('show');
-    destructMessage.innerHTML = `
-      <div class="destruct-text">💥 App Permanently Destroyed 💥</div>
-      <div class="contact-message">Sorry, contact dam to fix this.</div>
-    `;
-    document.body.classList.add('destroyed');
-    return; // Stop further execution
-  }
+//function initializeApp() {
+ // if (isAppDestroyed()) {
+   // const destructMessage = document.getElementById('selfDestructMessage');
+   // destructMessage.classList.add('show');
+  //  destructMessage.innerHTML = `
+  //    <div class="destruct-text">💥 App Permanently Destroyed 💥</div>
+    //  <div class="contact-message">Sorry, contact dam to fix this.</div>
+  //  `;
+   // document.body.classList.add('destroyed');
+  //  return; // Stop further execution
+ // }
 
 // random shenanigans
 const messages = [
@@ -94,29 +94,29 @@ function showDancingCats() {
   }); }
 
   // Function to destroy the app permanently
-function destroyApp() {
+//function destroyApp() {
   // Save destruction state in localStorage
-  localStorage.setItem('appDestroyed', 'true');
+//  localStorage.setItem('appDestroyed', 'true');
   
-  const destructMessage = document.getElementById('selfDestructMessage');
-  const destructText = destructMessage.querySelector('.destruct-text');
-  const contactText = destructMessage.querySelector('.contact-message');
+//  const destructMessage = document.getElementById('selfDestructMessage');
+//  const destructText = destructMessage.querySelector('.destruct-text');
+//  const contactText = destructMessage.querySelector('.contact-message');
   
-  destructText.textContent = '💥 Self-Destruct Activated 💥';
-  contactText.textContent = 'Sorry, contact dam to fix this.';
-  destructMessage.classList.add('show');
+//  destructText.textContent = '💥 Self-Destruct Activated 💥';
+//  contactText.textContent = 'Sorry, contact dam to fix this.';
+//  destructMessage.classList.add('show');
   
   // Disable interactions and hide the app
-  document.body.classList.add('destroyed');
-  document.querySelector('.container').style.display = 'none';
+//  document.body.classList.add('destroyed');
+//  document.querySelector('.container').style.display = 'none';
   
   // Optional: Clear confetti and cats
-  document.getElementById('confetti').remove();
-  document.getElementById('catContainer').remove();
+ // document.getElementById('confetti').remove();
+ // document.getElementById('catContainer').remove();
 }
 
 // Add event listener to the destroy button
-document.getElementById('destroyButton').addEventListener('click', destroyApp);
+//document.getElementById('destroyButton').addEventListener('click', destroyApp);
 
 // Start the app
 initializeApp();
