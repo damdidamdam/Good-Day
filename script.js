@@ -39,7 +39,7 @@ const messages = [
     }, 5000); // Stop confetti after 5 seconds
   }
   
-  / Function to show dancing cats
+  // Function to show dancing cats
 function showDancingCats() {
   // Clear previous cats
   catContainer.innerHTML = '';
