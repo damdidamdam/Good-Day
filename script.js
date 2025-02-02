@@ -1,8 +1,10 @@
-// Initialize the app
+// Function to initialize the app
 function initializeApp() {
-  // Clear the "appDestroyed" flag on every app start
+  // Ensure the app is always initialized fresh
   localStorage.removeItem('appDestroyed');
 
+  // App runs normally
+  document.querySelector('.container').style.display = 'block';
   // Get elements
   const messageElement = document.querySelector('p');
   const confettiButton = document.getElementById('confettiButton');
@@ -71,7 +73,7 @@ function initializeApp() {
     // Remove cats after 5 seconds
     setTimeout(() => {
       catContainer.innerHTML = '';
-    }, 5000);
+    }, 3000);
   }
 
   // Add event listener to the button
