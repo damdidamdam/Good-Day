@@ -1,17 +1,18 @@
 // Check if the app is already destroyed
-
-// Function to reset the app
+initializeApp();
 function resetApp() {
   localStorage.removeItem('appDestroyed'); // Clear the destroyed flag
   location.reload(); // Reload the page to reinitialize the app
+  const resetButton = document.getElementById('resetButton')
+  resetButton.addEventListener('click', resetApp);
+// Function to reset the app
+
 }
 
 // Show reset button if app is destroyed
-if (isAppDestroyed()) {
-  const resetButton = document.getElementById('resetButton');
-  resetButton.style.display = 'block'; // Show the reset button
-  resetButton.addEventListener('click', resetApp);
-}
+
+
+
 //function isAppDestroyed() {
  // return localStorage.getItem('appDestroyed') === 'true';
 //}
@@ -133,4 +134,4 @@ function showDancingCats() {
 //document.getElementById('destroyButton').addEventListener('click', destroyApp);
 
 // Start the app
-initializeApp();
+
