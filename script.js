@@ -1,14 +1,8 @@
 // Check if the app is already destroyed
-initializeApp();
-function resetApp() {
-  localStorage.removeItem('appDestroyed'); // Clear the destroyed flag
-  location.reload(); // Reload the page to reinitialize the app
-  const resetButton = document.getElementById('resetButton')
-  resetButton.addEventListener('click', resetApp);
-// Function to reset the app
-
-}
-
+// Initialize the app
+function initializeApp() {
+  // Clear the "appDestroyed" flag on every app start
+  localStorage.removeItem('appDestroyed');
 // Show reset button if app is destroyed
 
 
@@ -106,7 +100,7 @@ function showDancingCats() {
     triggerConfetti();
     showDancingCats();
   }); 
-//}
+}
 
   // Function to destroy the app permanently
 //function destroyApp() {
