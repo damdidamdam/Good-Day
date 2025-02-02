@@ -7,9 +7,9 @@ function initializeApp() {
 
 
 
-//function isAppDestroyed() {
- // return localStorage.getItem('appDestroyed') === 'true';
-//}
+function isAppDestroyed() {
+  return localStorage.getItem('appDestroyed') === 'true';
+}
 
 // Initialize the app
 //function initializeApp() {
