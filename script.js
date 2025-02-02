@@ -18,21 +18,21 @@ function initializeApp() {
 
 // random shenanigans
 const messages = [
-    "Hiii Good morning, 🌞 Just a little reminder that you’re capable of amazing things today. Go shine!",
+    "Hiii Good Afternoon, ☁️ Just a little reminder that you’re capable of amazing things today. Go shine!",
     "Patulog na me kagabi naisip ko gawan kaya kita ng app? well this is a website next cguro app hiho",
-    "Rise and shine, pretty riri!🌞 Today is your day, sayo ang araw na to GO! GO! GO!",
+    "Rise and shine, pretty riri!🌞 Today is your day, sayo ang araw na to ++ a crown 👑 GO!!",
     "Sending you a positive vibes. 😊 Good luck! You’ve got this, and I believe in you!",
     "Hello, sunshine! ☀️ Just wanted to say you’re doing an incredible job, and today is going to be amazing!",
-    "Good morning mæm nurse, 🌻 Keep spreading your light—it makes the world a better place",
+    "Good morning mæm nurse, 🌻 Keep spreading YOUR LIGHT — it makes the world a better place",
     "Hey there, I can't believe I did this. ✨ Anyways have a great day ahead, Fighting",
     "Just a little note to say you’re appreciated, loved, and absolutely wonderful. Have a magical day!",
-    "Good Afternoon, Check point lang po! Wala pa po kayong lisensya but you're driving me crazy!",
+    "Check point lang po! Wala pa po kayong lisensya but you're driving me crazy parang sugar rush rude!",
     "Hey you! 🌟 Today is a gift, and you’re the bow on top. Make it count and enjoy every moment!",
     "Sending you a burst of positivity and good vibes! ✨ Kaya mo yan miss little sanay na! btw d2 lng me!",
-    "HAHAHAHA lagyan ko tubatu para +point. 🌷 Yun okay OA talaga hehe sana matapos mo to.",
+    "HAHAHAHA lagyan ko tubatu para +point. 🌷 Yun lang okay! hehe sana matapos mo 'to.",
     "Good evening na rin pala. I hope u had a great day get the rest you deserve!",
-    "Hey, just letting u know na u can hmu whenever! 🌟 Dito lang ako sa gedli nagsesenti jkk.",
-    "Sending you a big dose of happiness and a shot of peace! Wish u all the good things today!"
+    "Hey, just letting u know na u can hmu whenever! 🌟 Dito lang ako sa gedli see you over the moon.",
+    "Administering u big doses of happiness and shots of peace! Wish u all the good things today!"
   ];
   
   // Get elements
