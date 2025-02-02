@@ -97,3 +97,37 @@ body {
       transform: translateY(0);
     }
   }
+  /* Permanent Self-Destruct Message */
+.self-destruct-message {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #ff0000;
+  text-align: center;
+  z-index: 1000;
+}
+
+.self-destruct-message.show {
+  display: block; /* Show when destroyed */
+  animation: explode 2s forwards;
+}
+
+@keyframes explode {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(10);
+  }
+}
+
+/* Disable all interactions when destroyed */
+body.destroyed {
+  pointer-events: none;
+  user-select: none;
+}
