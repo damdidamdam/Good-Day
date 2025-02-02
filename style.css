@@ -58,22 +58,32 @@ body {
     pointer-events: none;
   }
 
-  
-/* Dancing Cats Container */
-#catContainer {
+  #catContainer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     z-index: 10;
+    /* Limit max width to prevent overflow */
+    max-width: 100vw;
+    overflow: hidden;
   }
   
   #catContainer img {
-    width: 150px; /* Adjust size as needed */
+    width: 25vw; /* Responsive width based on viewport */
+    max-width: 100px; /* Maximum size for larger screens */
     height: auto;
-    margin: 10px;
+    margin: 5px;
     animation: dance 1s infinite alternate;
+  }
+  
+  /* Mobile-first adjustments */
+  @media (max-width: 768px) {
+    #catContainer img {
+      width: 30vw; /* Larger relative size on mobile */
+      margin: 2px; /* Smaller margin */
+    }
   }
   
   /* Dance Animation */
@@ -124,6 +134,30 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(10);
   }
+}
+
+/* Self-Destruct Message */
+.self-destruct-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.self-destruct-message.show {
+  display: block;
+  animation: explode 2s forwards;
+}
+
+.contact-message {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 10px;
 }
 
 /* Disable all interactions when destroyed */

@@ -9,14 +9,17 @@ function initializeApp() {
     // If destroyed, show the message and disable everything
     document.body.classList.add('destroyed');
     document.getElementById('selfDestructMessage').classList.add('show');
-    document.getElementById('selfDestructMessage').textContent = '💥 App Permanently Destroyed 💥';
-    return; // Stop further execution
+    destructMessage.innerHTML = `
+      💥 App Permanently Destroyed 💥<br>
+      <span class="contact-message">Sorry, contact dam to fix this.</span>
+    `;
+    return;
   }
 
 // random shenanigans
 const messages = [
     "Hiii Good morning, 🌞 Just a little reminder that you’re capable of amazing things today. Go shine!",
-    "Psst OA ba? Yes, OO! Sana ayos ka lang today! Have a great day!",
+    "Patulog na me kagabi naisip ko gawan kaya kita ng app? well this is a website next cguro app hiho",
     "Rise and shine, pretty riri!🌞 Today is your day, sayo ang araw na to GO! GO! GO!",
     "Sending you a positive vibes. 😊 Good luck! You’ve got this, and I believe in you!",
     "Hello, sunshine! ☀️ Just wanted to say you’re doing an incredible job, and today is going to be amazing!",
@@ -66,10 +69,13 @@ function showDancingCats() {
   // Clear previous cats
   catContainer.innerHTML = '';
 
-  // Add 3 dancing cats (you can adjust the number)
-  for (let i = 0; i < 3; i++) {
+  /// Adjust number of cats based on screen size
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const numCats = isMobile ? 2 : 3; // Fewer cats on mobile
+
+  for (let i = 0; i < numCats; i++) {
     const catImg = document.createElement('img');
-    catImg.src = 'https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif'; // Dancing cat GIF
+    catImg.src = 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJ6ZmMyY3plbW13eHhud2VjOHF1bWF4dmZzbjA5NGdiZXBrM3NnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SGAh7OmkAtJHQvtzb8/giphy.gif';
     catImg.alt = 'Dancing Cat';
     catContainer.appendChild(catImg);
   }
@@ -77,7 +83,7 @@ function showDancingCats() {
   // Remove cats after 5 seconds
   setTimeout(() => {
     catContainer.innerHTML = '';
-  }, 5000);
+  }, 2000);
 }
 
   // Add event listener to the button
@@ -95,10 +101,14 @@ function destroyApp() {
   // Hide the app and show the self-destruct message
   document.querySelector('.container').style.display = 'none';
   document.getElementById('selfDestructMessage').classList.add('show');
-  document.getElementById('selfDestructMessage').textContent = '💥 Self-Destruct Activated 💥';
+  destructMessage.innerHTML = `
+    💥 Self-Destruct Activated 💥<br>
+    <span class="contact-message">Sorry, contact dam to fix this.</span>
+  `;
   
   // Disable all interactions
   document.body.classList.add('destroyed');
+  document.querySelector('.container').style.display = 'none';
   
   // Optional: Clear confetti and cats
   document.getElementById('confetti').remove();
