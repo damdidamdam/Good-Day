@@ -98,15 +98,15 @@ function destroyApp() {
   // Save destruction state in localStorage
   localStorage.setItem('appDestroyed', 'true');
   
-  // Hide the app and show the self-destruct message
-  document.querySelector('.container').style.display = 'none';
-  document.getElementById('selfDestructMessage').classList.add('show');
-  destructMessage.innerHTML = `
-    💥 Self-Destruct Activated 💥<br>
-    <span class="contact-message">Sorry, contact dam to fix this.</span>
-  `;
+  const destructMessage = document.getElementById('selfDestructMessage');
+  const destructText = destructMessage.querySelector('.destruct-text');
+  const contactText = destructMessage.querySelector('.contact-message');
   
-  // Disable all interactions
+  destructText.textContent = '💥 Self-Destruct Activated 💥';
+  contactText.textContent = 'Sorry, contact dam to fix this.';
+  destructMessage.classList.add('show');
+  
+  // Disable interactions and hide the app
   document.body.classList.add('destroyed');
   document.querySelector('.container').style.display = 'none';
   

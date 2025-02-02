@@ -145,19 +145,30 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1000;
-  font-size: 1.5rem;
-  line-height: 1.5;
 }
 
 .self-destruct-message.show {
   display: block;
+}
+
+.destruct-text {
+  font-size: 2rem;
+  color: #ff0000;
+  margin-bottom: 10px;
   animation: explode 2s forwards;
 }
 
 .contact-message {
-  font-size: 1rem;
-  color: #888;
-  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffffff; /* Brighter color for visibility */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@keyframes explode {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-50%, -50%) scale(1.2); }
 }
 
 /* Disable all interactions when destroyed */
